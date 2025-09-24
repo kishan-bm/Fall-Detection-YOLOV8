@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fall Logs</title>
+</head>
+<body>
+    <h2>📋 Fall Detection Logs</h2>
+    <table border="1">
+        <tr>
+            <th>Timestamp</th>
+        </tr>
+        {% for log in logs %}
+        <tr>
+            <td>{{ log }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="{{ url_for('download_logs') }}"><button>📥 Download Logs</button></a>
+    <a href="{{ url_for('clear_logs') }}"><button>🗑️ Clear Logs</button></a>
+    <a href="{{ url_for('index') }}"><button>🔙 Back</button></a>
+</body>
+</html>

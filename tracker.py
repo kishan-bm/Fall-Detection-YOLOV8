@@ -48,3 +48,21 @@ class Tracker:
         # Update dictionary with IDs not used removed
         self.center_points = new_center_points.copy()
         return objects_bbs_ids
+
+
+if __name__ == "__main__":
+    tracker = Tracker()
+
+    # Simulating detected objects (x, y, w, h)
+    objects = [(100, 150, 50, 60), (200, 250, 40, 50)]
+
+    print("First Frame:")
+    print(tracker.update(objects))  # First time detection
+
+    objects = [(105, 155, 50, 60), (210, 260, 40, 50)]  # Slight movement
+    print("Second Frame:")
+    print(tracker.update(objects))  # Should track same objects with the same IDs
+
+    objects = [(300, 350, 60, 70)]  # New object appears
+    print("Third Frame:")
+    print(tracker.update(objects))  # New object gets a new ID

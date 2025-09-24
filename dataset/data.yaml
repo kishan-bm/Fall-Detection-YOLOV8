@@ -1,0 +1,13 @@
+train: C:\Users\Kishan B M\Real-time-Fall-Detection-Using-YOLOV8-Computer-vision\dataset\train\images
+val: C:\Users\Kishan B M\Real-time-Fall-Detection-Using-YOLOV8-Computer-vision\dataset\valid\images
+test: C:\Users\Kishan B M\Real-time-Fall-Detection-Using-YOLOV8-Computer-vision\dataset\test\images
+nc: 2
+names: ['fall', 'person']
+
+
+roboflow:
+  workspace: ufddfdd
+  project: ur-fall-detection-dataset
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/ufddfdd/ur-fall-detection-dataset/dataset/1

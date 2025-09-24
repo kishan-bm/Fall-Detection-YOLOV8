@@ -1,0 +1,13 @@
+# Virtual environments
+.venv/
+venv/
+
+# PyTorch/YOLO model files
+*.pt
+
+# Other temporary/system files
+__pycache__/
+*.lnk
+*.jpeg
+*.png
+*.txt
